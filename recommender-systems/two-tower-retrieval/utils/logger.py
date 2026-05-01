@@ -1,5 +1,4 @@
-from typing import Union
-import logging
+from utils.libs import *
 
 class Logger:
   """Custom Logger class to create an interpretable logger prototype"""
