@@ -7,6 +7,5 @@ from utils.logger import Logger
 # Download & load
 def fetch_data():
 
-    return data
-
-def 
+    return None
+ 
