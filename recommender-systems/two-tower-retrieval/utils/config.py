@@ -20,4 +20,6 @@ metadata_params = {"path": reviews_path,
                    "name": metadata_name,
                    "split": "full",}
 
-
+# Embeddings
+EMBED_DIM = 64   # final embedding dimension for both towers
+CAT_EMB   = 16   # dimension for each categorical embedding

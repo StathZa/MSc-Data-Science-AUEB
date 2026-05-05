@@ -43,3 +43,6 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 from sentence_transformers import SentenceTransformer
+
+# Visualisation
+import matplotlib.pyplot as plt
