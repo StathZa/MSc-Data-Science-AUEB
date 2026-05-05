@@ -1,5 +1,5 @@
 # Basic libraries
-import os, glob, sys, re, random, math, gc, pickle, logging
+import os, gc, glob, sys, re, random, math, gc, pickle, logging
 import pandas as pd
 import numpy as np
 from datetime import datetime
@@ -34,6 +34,9 @@ if not sys.warnoptions:
 # Data loading
 from datasets import load_dataset
 from torch.utils.data import Dataset, DataLoader
+
+# Text Embeddings
+from sentence_transformers import SentenceTransformer
 
 # Deep Learning Pytorch 
 import torch
