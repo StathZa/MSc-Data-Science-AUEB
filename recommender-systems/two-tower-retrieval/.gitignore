@@ -1,1 +1,7 @@
 msc-data-science-aueb/
+<<<<<<< HEAD
+=======
+tokens.env
+*.env
+data/
+>>>>>>> 88ee5bb4c92af8d8ae8bf40c94986fc03735497a
