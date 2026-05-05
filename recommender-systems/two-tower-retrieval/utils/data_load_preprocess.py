@@ -1,7 +1,7 @@
 """Data loading, vocabulary construction, and train/test splitting."""
 # Import Dependencies
 from utils.config import *
-from utils.libs import pd, logging, load_dataset
+from utils.libs import os, pd, logging, load_dataset, Path
 
 # Download & load
 def _stream_to_dataframe(parameters: dict, logger, max_rows: int) -> pd.DataFrame:
@@ -43,6 +43,11 @@ def fetch_review_data(
         DataFrame containing the review data. Returns an empty DataFrame
         if the download fails.
     """
+    data_dir: str = Path(os.getcwd()) / "data" / folder_name
+    file: str = str(data_dir / file_name)
+
+    logger.info("Checking filesystem for the data")
+
     # Check whether data exist
     if not data_dir.exists():
         logger.warning(f"Creating data directory to persist the reviews and metadata content")
@@ -91,7 +96,12 @@ def fetch_review_metadata(
         DataFrame containing the item metadata. Returns an empty DataFrame
         if the download fails.
     """
+    data_dir: str = Path(os.getcwd()) / "data" / folder_name
+    file: str = str(data_dir / file_name)
 
+    logger.info("Checking filesystem for the data")
+
+    
     # Check whether data exist
     if not data_dir.exists():
         logger.warning(f"Creating data directory to persist the reviews and metadata content")
