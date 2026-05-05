@@ -1,8 +1,7 @@
 """Data loading, vocabulary construction, and train/test splitting."""
 # Import Dependencies
-from datasets import load_dataset
 from utils.config import *
-import logging
+from utils.libs import pd, logging, load_dataset
 
 # Download & load
 def _stream_to_dataframe(parameters: dict, logger, max_rows: int) -> pd.DataFrame:
