@@ -9,7 +9,7 @@ def build_text_embeddings(items_df: pd.DataFrame,
   st_model = SentenceTransformer(model_name, device=device)
 
   texts = (items_df["title"].fillna("") + " " + items_df["description"].fillna("")).tolist()
-  texts = [texts.strip()[:512] for t in texts]
+  texts = [t.strip()[:512] for t in texts]
 
   embeddings = st_model.encode(texts, batch_size=256, show_progress_bar=True)
   text_embed = torch.tensor(embeddings, dtype=torch.float32)
@@ -29,7 +29,7 @@ def build_numerical_features(items_df: pd.DataFrame,
   num_cols = ["log_price", "average_rating"]
   num_items = len(item2idx) 
 
-  item_num = torch.zeros(num_items, len(num_cols), dype=torch.float32)
+  item_num = torch.zeros(num_items, len(num_cols), dtype=torch.float32)
 
   for i, col in enumerate(num_cols):
     mn, mx = items_df[col].min(), items_df[col].max()
