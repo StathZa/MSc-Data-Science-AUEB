@@ -27,3 +27,11 @@ CAT_EMB   = 16   # dimension for each categorical embedding
 # Training layout
 EPOCHS = 50
 PATIENCE = 7
+MAX_EPOCHS = 70
+
+# hyperparameter tuning
+param_grid = {
+    'embed_dim': [32, 64, 128],
+    'lr': [1e-2, 1e-3, 5e-4],
+    'batch_size': [512, 1024],
+}
