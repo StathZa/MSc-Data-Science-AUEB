@@ -2,6 +2,19 @@
 __pycache__/
 *.py[codz]
 *$py.class
+*.py[oc]
+
+# Project specific ignores
+msc-data-science-aueb/
+tokens.env
+*.env
+
+# Model checkpoints
+*.pt
+*.pth
+
+# OS
+.DS_STORE
 
 # C extensions
 *.so
@@ -205,6 +218,3 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
-
-
-# Project specific ignores

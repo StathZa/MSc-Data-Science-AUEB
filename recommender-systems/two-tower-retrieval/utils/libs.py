@@ -5,6 +5,7 @@ import numpy as np
 from datetime import datetime
 from collections import Counter, defaultdict
 from dataclasses import dataclass
+from itertools import product
 
 # Environment files
 from dotenv import load_dotenv, dotenv_values
