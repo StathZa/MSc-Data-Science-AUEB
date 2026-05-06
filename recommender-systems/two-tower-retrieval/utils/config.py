@@ -6,7 +6,7 @@ SEED: int = 42
 
 USE_COLAB: bool = False
 
-# Data path directories
+# Remote directories and configuration
 reviews_path = "McAuley-Lab/Amazon-Reviews-2023"
 reviews_name = "raw_review_Electronics"
 metadata_name = "raw_meta_Electronics"
@@ -19,6 +19,10 @@ reviews_params = {"path": reviews_path,
 metadata_params = {"path": reviews_path, 
                    "name": metadata_name,
                    "split": "full",}
+
+# Local filenames
+reviews_file = "review_data.parquet.gzip"
+metadata_file = "review_metadata.parquet.gzip"
 
 # Embeddings
 EMBED_DIM = 64   # final embedding dimension for both towers
