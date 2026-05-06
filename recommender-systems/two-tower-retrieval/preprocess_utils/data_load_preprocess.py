@@ -20,7 +20,7 @@ def _stream_to_dataframe(parameters: dict, logger, max_rows: int) -> pd.DataFram
 
 def fetch_review_data(
     parameters: dict,
-    delete_sample_data: bool = false,
+    delete_sample_data: bool = False,
     logger: logging.Logger = None,
     folder_name: str = "reviews",
     file_name: str = reviews_file,
@@ -46,7 +46,7 @@ def fetch_review_data(
     """
 
     if delete_sample_data:
-      logger.info(f"Sample file will be deleted from {folder_name}. Disable this with `delete_sample_data=false`")
+      logger.info(f"Sample file will be deleted from {folder_name}. Disable this with `delete_sample_data=False`")
       os.remove(Path(os.getcwd()) / glob.glob(f"**/*{file_name}", recursive=True)[0])
     
     data_dir: str = Path(os.getcwd()) / "data" / folder_name
@@ -83,7 +83,7 @@ def fetch_review_data(
 
 def fetch_review_metadata(
     parameters: dict,
-    delete_sample_data: bool = false,
+    delete_sample_data: bool = False,
     logger: logging.Logger = None,
     folder_name: str = "metadata",
     file_name: str = metadata_file,
@@ -104,7 +104,7 @@ def fetch_review_metadata(
         if the download fails.
     """
     if delete_sample_data:
-      logger.info(f"Sample file will be deleted from {folder_name}. Disable this with `delete_sample_data=false`")
+      logger.info(f"Sample file will be deleted from {folder_name}. Disable this with `delete_sample_data=False`")
       os.remove(Path(os.getcwd()) / glob.glob(f"**/*{file_name}", recursive=True)[0])
 
     data_dir: str = Path(os.getcwd()) / "data" / folder_name
